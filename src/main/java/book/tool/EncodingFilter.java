@@ -12,7 +12,8 @@ import java.io.IOException;
 //@WebFilter(urlPatterns = {"/*"})
 @WebFilter(urlPatterns = {"" +
         "/chapter10/*", "/chapter11/*", "/cahpter12/*", "/chapter14/*", "/chapter15/*", "/chapter16/*", "/chapter17/*",
-        "/chapter18/*", "/chapter19/*"
+        "/chapter18/*", "/chapter19/*", "/chapter20/*", "/chapter21/*", "/chapter22/*", "/chapter23/*", "/chapter24/*",
+        "/chapter25/*"
 })
 public class EncodingFilter implements Filter {
 
