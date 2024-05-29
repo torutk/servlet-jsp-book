@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="../header.html" %>
+<%@ include file="../../header.html" %>
 
 <p>bigdataテーブルから検索します。</p>
 
@@ -64,4 +64,4 @@
 
 
 
-<%@ include file="../footer.html" %>
+<%@ include file="../../footer.html" %>

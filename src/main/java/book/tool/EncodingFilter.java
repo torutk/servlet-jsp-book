@@ -10,7 +10,10 @@ import jakarta.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 //@WebFilter(urlPatterns = {"/*"})
-@WebFilter(urlPatterns = {"/chapter10/*"})
+@WebFilter(urlPatterns = {"" +
+        "/chapter10/*", "/chapter11/*", "/cahpter12/*", "/chapter14/*", "/chapter15/*", "/chapter16/*", "/chapter17/*",
+        "/chapter18/*", "/chapter19/*"
+})
 public class EncodingFilter implements Filter {
 
     @Override
