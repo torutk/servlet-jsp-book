@@ -18,3 +18,8 @@ th, td {
     border: solid 1px;
     padding: 8px;
 }
+
+.table-of-contents {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
