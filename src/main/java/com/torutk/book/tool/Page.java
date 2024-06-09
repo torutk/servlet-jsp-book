@@ -9,7 +9,7 @@ public class Page {
                 <html>
                 <head>
                 <meta charset="UTF-8">
-                <title>Servlet/JSP Sample Programs</title>
+                <title>Servlet/JSP Sample Programs Refined</title>
                 </head>
                 <body>
                 """);

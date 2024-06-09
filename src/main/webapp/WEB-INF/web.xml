@@ -65,6 +65,16 @@
         <url-pattern>/chapter19/param-servlet</url-pattern>
     </filter-mapping>
 
+    <!-- torutk refinement -->
+    <servlet>
+        <servlet-name>hello-html</servlet-name>
+        <servlet-class>com.torutk.book.chapter4.HelloHtmlServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello-html</servlet-name>
+        <url-pattern>/torutk/chapter4/hello-html</url-pattern>
+    </servlet-mapping>
+
 <servlet>
     <servlet-name>helloXray</servlet-name>
     <servlet-class>com.torutk.book.HelloXray</servlet-class>
