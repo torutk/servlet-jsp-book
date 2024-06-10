@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Servlet/JSP Samples Refined</title>
+</head>
+<body>
+
+<form action="select" method="post">
+        <label for="count">購入数を選択してください。</label>
+        <select name="count" id="count">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <p>購入方法を選択してください。</p>
+        <label><input type="radio" name="payment" value="カード" checked>カード</label>
+        <label><input type="radio" name="payment" value="代金引換">代金引換</label>
+        <label><input type="radio" name="payment" value="銀行振込">銀行振込</label>
+        <label><input type="radio" name="payment" value="コンビニ">コンビニ</label>
+
+        <p><label>商品のご感想をお寄せください。<br>
+            <textarea name="review" cols="30" rows="5">商品名：</textarea>
+        </label></p>
+        <p>お知らせのメールの受信を希望されますか？</p>
+        <label><input type="checkbox" name="mail">おすすめ商品のメールを受け取る</label>
+    <p><input type="submit" value="確定"></p>
+</form>
+
+</body>
+</html>

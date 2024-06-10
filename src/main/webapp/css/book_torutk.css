@@ -2,9 +2,16 @@ body {
     background-image: url(../image/bg_torutk.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    grid-template:
+    "header header" auto
+    "sidebar main" 1fr
+    "footer footer" auto / auto 1fr;
+    height: 100vh;
 }
 
 header {
+    grid-area: header;
     position: relative;
     padding: 0.3em 0.5em;
     /*
@@ -12,6 +19,21 @@ header {
      */
     color: navy;
     text-align: center;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: sidebar;
+}
+aside ul {
+    white-space: nowrap;
+}
+
+footer {
+    grid-area: footer;
 }
 
 table {
@@ -31,7 +53,7 @@ tr:nth-child(even) {
     background-color: whitesmoke;
 }
 
-.table-of-contents {
+aside {
     display: grid;
     grid-template-columns: 30% 30% 30%;
 }
