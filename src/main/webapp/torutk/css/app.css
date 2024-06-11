@@ -1,0 +1,21 @@
+body {
+  background-color: azure;
+}
+.submit-button {
+  background-color: lightskyblue;
+  font-size: 12px;
+  border-radius: 5px;
+  border-bottom: solid 3px cornflowerblue;
+  box-shadow: 3px 3px 3px gray;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: deepskyblue;
+}
+
+.click-down:active {
+  transform: translateY(2px);
+  border-bottom: none;
+}
+
