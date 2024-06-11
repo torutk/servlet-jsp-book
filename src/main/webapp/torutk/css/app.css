@@ -1,21 +1,16 @@
 body {
   background-color: azure;
 }
-.submit-button {
-  background-color: lightskyblue;
-  font-size: 12px;
-  border-radius: 5px;
-  border-bottom: solid 3px cornflowerblue;
-  box-shadow: 3px 3px 3px gray;
-  transition: 0.3s;
+
+.button {
+  display: inline-block;
+  font-size: 1.2rem;
+  background-color: paleturquoise;
+  border-radius: 8px;
+  padding: .25rem .75rem;
+  transition: background-color 1s ease-out 200ms;
 }
 
-.submit-button:hover {
-  background-color: deepskyblue;
+.button:hover {
+  background-color: skyblue;
 }
-
-.click-down:active {
-  transform: translateY(2px);
-  border-bottom: none;
-}
-

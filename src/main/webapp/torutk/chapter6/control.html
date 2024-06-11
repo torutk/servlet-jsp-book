@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Servlet/JSP Samples Refined</title>
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+
+<form action="control" method="post">
+    <p>レストランをご予約ください。</p>
+    <p>
+        <label for="count-select">人数</label>
+        <select name="count" id="count-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </p>
+
+    <p>
+        座席
+        <label><input type="radio" name="seat" value="禁煙"　checked>禁煙</label>
+        <label><input type="radio" name="seat" value="喫煙">喫煙</label>
+    </p>
+
+    <p>
+        オプション
+        <label><input type="checkbox" name="option" value="ケーキ">ケーキ</label>
+        <label><input type="checkbox" name="option" value="花束">花束</label>
+    </p>
+
+    <p><input class="button" type="submit" value="予約"></p>
+</form>
+
+</body>
+</html>
