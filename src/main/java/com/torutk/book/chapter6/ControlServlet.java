@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collections;
-import java.util.List;
+import java.util.stream.Stream;
 
 @WebServlet(urlPatterns = {"/torutk/chapter6/control"})
 public class ControlServlet extends HttpServlet {
@@ -22,13 +22,10 @@ public class ControlServlet extends HttpServlet {
         Page.header(out);
 
         req.setCharacterEncoding("UTF-8");
-        List<String> names = Collections.list(req.getParameterNames());
-        for (String name : names) {
-            String[] values = req.getParameterValues(name);
-            for (String value : values) {
-                out.println("<p>" + name + "=" + value + "</p>");
-            }
-        }
+        Collections.list(req.getParameterNames()).stream()
+                .flatMap(name -> Stream.of(req.getParameterValues(name))
+                        .map(value -> "<p>" + name + "=" + value + "</p>"))
+                .forEach(out::println);
         Page.footer(out);
     }
 }
