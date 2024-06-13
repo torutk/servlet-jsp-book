@@ -2,6 +2,7 @@ body {
     background-image: url(../image/bg_torutk.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     display: grid;
     grid-template:
     "header header" auto
