@@ -9,8 +9,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Collections;
+import java.util.Spliterator;
+import java.util.Spliterators;
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 @WebServlet(urlPatterns = {"/torutk/chapter6/control"})
 public class ControlServlet extends HttpServlet {
@@ -22,7 +24,7 @@ public class ControlServlet extends HttpServlet {
         Page.header(out);
 
         req.setCharacterEncoding("UTF-8");
-        Collections.list(req.getParameterNames()).stream()
+        StreamSupport.stream(Spliterators.spliteratorUnknownSize(req.getParameterNames().asIterator(), Spliterator.ORDERED),false)
                 .flatMap(name -> Stream.of(req.getParameterValues(name))
                         .map(value -> "<p>" + name + "=" + value + "</p>"))
                 .forEach(out::println);
