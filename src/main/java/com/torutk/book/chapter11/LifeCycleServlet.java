@@ -8,8 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"/chapter/11/life-cycle"})
-public class LifeCycle extends HttpServlet {
+@WebServlet(urlPatterns = {"/torutk/chapter11/life-cycle"})
+public class LifeCycleServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         System.out.println("init");

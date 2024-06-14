@@ -9,9 +9,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.concurrent.TimeUnit;
 
-@WebServlet(urlPatterns = {"/chapter/11/count-thread"})
-public class CountThread extends HttpServlet {
+@WebServlet(urlPatterns = {"/torutk/chapter11/count-thread"})
+public class CountThreadServlet extends HttpServlet {
     int count;
 
     @Override
@@ -20,7 +21,7 @@ public class CountThread extends HttpServlet {
         Page.header(out);
         int i = count;
         try {
-            Thread.sleep(10_000);
+            TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             // do nothing
         }
