@@ -11,6 +11,7 @@
         <param-value>context-param</param-value>
     </context-param>
 
+    <!-- Chapter 4 -->
     <servlet>
         <servlet-name>hello3</servlet-name>
         <servlet-class>book.chapter4.Hello3</servlet-class>
@@ -20,6 +21,7 @@
         <url-pattern>/chapter4/hello3</url-pattern>
     </servlet-mapping>
 
+    <!-- Chapter 10 -->
     <filter>
         <filter-name>hellofilter</filter-name>
         <filter-class>book.chapter10.HelloFilter</filter-class>
@@ -65,7 +67,7 @@
         <url-pattern>/chapter19/param-servlet</url-pattern>
     </filter-mapping>
 
-    <!-- torutk refinement -->
+    <!-- torutk refinement chapter 4 -->
     <servlet>
         <servlet-name>hello-html</servlet-name>
         <servlet-class>com.torutk.book.chapter4.HelloHtmlServlet</servlet-class>
@@ -75,12 +77,33 @@
         <url-pattern>/torutk/chapter4/hello-html</url-pattern>
     </servlet-mapping>
 
-<servlet>
-    <servlet-name>helloXray</servlet-name>
-    <servlet-class>com.torutk.book.HelloXray</servlet-class>
-</servlet>
- <servlet-mapping>
-    <servlet-name>helloXray</servlet-name>
-    <url-pattern>/hello/xray</url-pattern>
-</servlet-mapping>
+    <!-- torutk refinement chapter 10 -->
+    <filter>
+        <filter-name>torutk-hellofilter</filter-name>
+        <filter-class>com.torutk.book.chapter10.HelloFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>torutk-hellofilter</filter-name>
+        <url-pattern>/torutk/chapter10/hello</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>torutk-hellofilter2</filter-name>
+        <filter-class>com.torutk.book.chapter10.HelloFilter2</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>torutk-hellofilter2</filter-name>
+        <url-pattern>/torutk/chapter10/hello</url-pattern>
+    </filter-mapping>
+
+
+    <!-- experiment -->
+    <servlet>
+        <servlet-name>helloXray</servlet-name>
+        <servlet-class>com.torutk.book.HelloXray</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helloXray</servlet-name>
+        <url-pattern>/hello/xray</url-pattern>
+    </servlet-mapping>
 </web-app>

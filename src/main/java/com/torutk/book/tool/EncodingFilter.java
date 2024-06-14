@@ -10,7 +10,10 @@ import jakarta.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 @WebFilter(urlPatterns = {
-        "/chapter11/*", "/chapter14/*", "/chapter15/*, /chapter16/*, /chapter17/*, /chapter18/*"
+        "/torutk/chapter10/*", "/torutk/chapter11/*", "/torutk/chapter12/*", "/torutk/chapter13/*", "/torutk/chapter14/*",
+        "/torutk/chapter15/*", "/torutk/chapter16/*", "/torutk/chapter17/*", "/torutk/chapter18/*", "/torutk/chapter19/*",
+        "/torutk/chapter20/*", "/torutk/chapter21/*", "/torutk/chapter22/*", "/torutk/chapter23/*", "/torutk/chapter24/*",
+        "/torutk/chapter25/*"
 }, asyncSupported = true)
 public class EncodingFilter implements Filter {
     @Override
