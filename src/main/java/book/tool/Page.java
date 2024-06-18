@@ -15,6 +15,9 @@ public class Page {
     }
 
     public static void footer(PrintWriter out) {
+        out.println("<footer>");
+        out.println("<p>基礎からのサーブレット/JSP 第5版 サンプルコード</p>");
+        out.println("</footer>");
         out.println("</body>");
         out.println("</html>");
     }
