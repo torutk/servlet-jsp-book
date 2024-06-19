@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!-- Template file of 'context.xml' -->
+<!-- describe url, username and password for each environment -->
 <Context>
     <Resource
         name="jdbc/book"
         auth="Container"
         type="javax.sql.DataSource"
         driverClassName="org.h2.Driver"
-        url="jdbc:h2:tcp://localhost/~/Document/study/java/jakartaee/h2/book2"
+        url="jdbc:h2:tcp://localhost/~/foo/bar/book"
         username="sa"
         password="sa"
     />
