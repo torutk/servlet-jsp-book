@@ -5,7 +5,7 @@
         auth="Container"
         type="javax.sql.DataSource"
         driverClassName="org.h2.Driver"
-        url="jdbc:h2:tcp://localhost/~/study/java/javareading/2024_servlet_jsp/h2/book"
+        url="jdbc:h2:tcp://localhost/~/Document/study/java/jakartaee/h2/book2"
         username="sa"
         password="sa"
     />
