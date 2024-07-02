@@ -15,26 +15,26 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/torutk/chapter15/search"})
-public class Search extends HttpServlet {
+@WebServlet(urlPatterns = {"/torutk/chapter15/insert2"})
+public class Insert2Servlet extends HttpServlet {
     @Override
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         Page.header(out);
-        String keyword = req.getParameter("keyword");
+        String name = req.getParameter("name");;
+        int price = Integer.parseInt(req.getParameter("price"));
+
+        Product product = new Product(name, price);
         ProductDao dao = new ProductDao();
         try {
-            List<Product> products = dao.search(keyword);
-            for (Product product : products) {
-                out.println("""
-                        %d:%s:%d<br>
-                        """.formatted(product.id(), product.name(), product.price())
-                );
+            dao.insert(product);
+            List<Product> products = dao.search("");
+            for (Product p : products) {
+                out.printf("%d：%s：%d<br>%n", p.id(), p.name(), p.price());
             }
         } catch (SQLException | NamingException e) {
             e.printStackTrace(out);
         }
         Page.footer(out);
     }
-
 }
